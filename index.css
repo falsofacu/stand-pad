@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  overflow: hidden;
+
+  background-color: #121223;
+  color: white;
+}
+
+h1, h3 {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 10px;
+}
+
+h3 {
+  margin-top: 15px;
+  text-decoration: underline;
+}
+
+button {
+  all: unset;
+  outline: revert;
+}
+
+select {
+  height: 30px;
+  width: 80vw;
+  max-width: 500px;
+}
+
+#heading {
+  max-height: 15vh;
+  min-height: 120px;
+}
+
+#select-music-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#select-music {
+  margin-top: 5px;
+}
+
+#kit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  max-height: 80vh;
+  height: 700px;
+}
+
+.btn-pad {
+  width: 80vw;
+  max-width: 500px;
+  height: 20vh;
+  text-align: center;
+  font-size: 60px;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.7);
+}
+
+.btn-pad:hover {
+  outline: 1px solid white;
+}
+
+.btn-pad:active {
+  transform: scale(0.98);
+}
+
+#btn-music {
+  background-color: #EECB59;
+}
+
+#btn-bell {
+  background-color: #DF53AC;
+}
+
+#btn-shot {
+  background-color: #50B0F7;
+}
+
+.btn-text {
+  filter: drop-shadow(0 0 2px black);
+}

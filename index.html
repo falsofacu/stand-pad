@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css"><title>Stand-Pad</title>
+</head>
+<body>
+
+  <div id="heading">
+    <h1>STAND-PAD</h1>
+  
+    <div id="select-music-wrap">
+      <h3>SELECT MUSIC:</h3>
+      <select id="select-music" name="select-music">
+        <option value="0" selected>PELOTUDA - DILLOM</option>
+        <option value="1">OTRA</option>
+        <option value="2">OTRA 2</option>
+      </select>
+    </div>
+
+  </div>
+
+  <div id="kit">
+    <button id="btn-music" class="btn-pad"><span class="btn-text">🎵</span></button>
+    <button id="btn-bell" class="btn-pad"><span class="btn-text">🔔</span></button>
+    <button id="btn-shot" class="btn-pad"><span class="btn-text">🔫</span></button>
+  </div>
+  
+  <audio id="audio-music" src="./music/PELOTUDA - DILLOM.mp3"></audio>
+  <audio id="audio-bell" src="./music/BELL.mp3"></audio>
+  <audio id="audio-shot" src="./music/SHOT.mp3"></audio>
+
+  <script src="index.js"></script>
+  
+</body>
+</html>
