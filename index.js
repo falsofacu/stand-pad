@@ -138,6 +138,7 @@ btnMusic.addEventListener("click", () => {
     document.getElementsByClassName("loading-anim")[0].style.transitionDuration= "0s";
   }
   else {
+    document.getElementsByClassName("loading-anim")[0].style.transitionDuration= "35s";
     tryPlayMusic(currentSong.src);
     changeButtonText(btnMusic, "🛑");
   }
