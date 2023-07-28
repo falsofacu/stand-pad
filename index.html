@@ -28,11 +28,13 @@
       <div id="timer-setting">
         <h3>TIMER:</h3>
         <select id="select-time" name="select-time">
-          <option value="">4:30</option>
-          <option value="" selected>5:00</option>
-          <option value="">8:00</option>
-          <option value="">10:00</option>
-          <option value="">15:00</option>
+          <option value="10">0:10</option>
+          <option value="150">3:00</option>
+          <option value="270">4:30</option>
+          <option value="300" selected>5:00</option>
+          <option value="480">8:00</option>
+          <option value="600">10:00</option>
+          <option value="900">15:00</option>
         </select>
       </div>
     
@@ -49,14 +51,10 @@
   </div>
 
   <div id="kit">
-    <button id="btn-music" class="btn-pad"><span class="btn-text">🎵</span></button>
-    <button id="btn-bell" class="btn-pad" ><span class="btn-text">🔔</span></button>
-    <button id="btn-shot" class="btn-pad"><span class="btn-text">🔫</span></button>
+    <button id="btn-music" class="btn-pad"><div class="loading-anim"></div><span class="btn-text">🎵</span></button>
+    <button id="btn-bell" class="btn-pad" ><div class="loading-anim"></div><span class="btn-text">🔔</span></button>
+    <button id="btn-shot" class="btn-pad"><div class="loading-anim"></div><span class="btn-text">🔫</span></button>
   </div>
-  
-  <audio id="audio-music" src="https://falsofacu.github.io/stand-pad/music/PELOTUDA%20-%20DILLOM.mp3" preload="auto"></audio>
-  <audio id="audio-bell" src="https://falsofacu.github.io/stand-pad/music/BELL.mp3" preload="auto"></audio>
-  <audio id="audio-shot" src="https://falsofacu.github.io/stand-pad/music/SHOT.mp3" preload="auto"></audio>
 
   <script src="index.js"></script>
   
