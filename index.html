@@ -3,22 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css"><title>Stand-Pad</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="switch.css">
+  <title>Stand-Pad</title>
 </head>
 <body>
 
   <div id="heading">
     <h1>STAND-PAD</h1>
-  
-    <div id="select-music-wrap">
-      <h3>SELECT MUSIC:</h3>
-      <select id="select-music" name="select-music">
-        <option value="0" selected>PELOTUDA - DILLOM</option>
-        <option value="1">OTRA</option>
-        <option value="2">OTRA 2</option>
-      </select>
-    </div>
 
+    <div id="app-settings">
+      <div>
+        <h3>TIMER CAMPANA:</h3>
+        <div id="demo-switch">
+          <input type="checkbox" id="check" class="switch">
+          <label for="check"></label>
+          <div id="option-wrapper">
+            <span class="option" id="option-1">OFF</span>
+            <span class="option" id="option-2">ON</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="timer-setting">
+        <h3>TIMER:</h3>
+        <select id="select-time" name="select-time">
+          <option value="">4:30</option>
+          <option value="" selected>5:00</option>
+          <option value="">8:00</option>
+          <option value="">10:00</option>
+          <option value="">15:00</option>
+        </select>
+      </div>
+    
+      <div id="select-music-wrap">
+        <h3>MÚSICA:</h3>
+        <select id="select-music" name="select-music">
+          <option value="0" selected>PELOTUDA - DILLOM</option>
+          <option value="1">OTRA</option>
+          <option value="2">OTRA 2</option>
+        </select>
+      </div>
+
+    </div>
   </div>
 
   <div id="kit">
