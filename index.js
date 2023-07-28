@@ -70,7 +70,6 @@ const music = [
 ]
 
 const bellSoundHref = "https://falsofacu.github.io/stand-pad/music/BELL.mp3"
-const shotSoundHref = "https://falsofacu.github.io/stand-pad/music/SHOT.mp3"
 
 const timerSwitch = document.getElementById("check");
 let timerSwitchValue = timerSwitch.checked;
@@ -80,14 +79,12 @@ let timerValueSeconds = timerTime.value;
 
 let audioMusic = document.getElementById("audio-music");
 const audioBell = document.getElementById("audio-bell");
-const audioShot = document.getElementById("audio-shot");
 
 const selectMusic = document.getElementById("select-music");
 let currentSong = music[Number(selectMusic.value)];
 
 const btnMusic = document.getElementById("btn-music");
 const btnBell = document.getElementById("btn-bell");
-const btnShot = document.getElementById("btn-shot");
 
 //* Update vars when necesary
 // Timer on/off
@@ -160,10 +157,4 @@ btnBell.addEventListener("click", () => {
 btnBell.addEventListener("transitionend", () => {
   changeButtonText(btnBell, "🔔");
 })
-
-//Shot 
-btnShot.addEventListener("click", () => {
-  tryPlaySFX(shotSoundHref);
-})
-
 
