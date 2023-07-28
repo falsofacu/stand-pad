@@ -47,7 +47,6 @@ select {
 }
 
 /* Settings */
-
 #app-settings {
   display: flex;
   flex-wrap: wrap;
@@ -82,7 +81,6 @@ select {
 }
 
 /* Buttons */
-
 #kit {
   display: flex;
   flex-direction: row;
@@ -90,6 +88,7 @@ select {
   justify-content: space-around;
   flex-wrap: wrap;
 
+  position: relative;
   min-height: 100px;
   max-height: 60vh;
   margin-top: 10px;
@@ -104,6 +103,8 @@ select {
   font-weight: bold;
   border-radius: 8px;
   box-shadow: 0 0 4px rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+  position: relative;
 }
 
 .btn-pad:hover {
@@ -115,6 +116,7 @@ select {
 }
 
 #btn-music {
+  position: relative;
   background-color: var(--yellow);
 }
 
@@ -130,6 +132,52 @@ select {
   filter: drop-shadow(0 0 2px black);
 }
 
+/** Animations */
+
+.loading-anim {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+}
+
+.btn-pad:active .loading-anim {
+  width: 100%;
+}
+
+#btn-music:not(:active) .loading-anim {
+  transition: width 60s linear;
+}
+
+#btn-bell:not(:active) .loading-anim {
+  transition: width 1.6s linear;
+}
+
+#btn-shot:not(:active) .loading-anim {
+  transition: width .3s linear;
+}
+
+
+@keyframes music-progress {
+  0% {
+    background: linear-gradient(180deg, var(--yellow) 0%, var(--yellow-load) 100%);
+  }
+  100% {
+    background: linear-gradient(var(--yellow) 100%, var(--yellow-load) 100%);
+  }
+}
+
+@keyframes bell-progress {
+  
+}
+
+@keyframes shot-progress {
+  
+}
+
+/** Media Querys */
 @media (max-width: 1220px) {
 
   #kit {
