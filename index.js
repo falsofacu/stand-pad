@@ -149,23 +149,39 @@ btnMusic.addEventListener("transitionend", () => {
 })
 
 //Bell
+let timerOn = false;
+let timerCountInterval;
+let timerSoundTimeout;
+
 btnBell.addEventListener("click", () => {
   const loadingElement = document.getElementsByClassName("loading-anim")[1];
-  if(timerSwitchValue) {
-    let timeLeft = timerValueSeconds;
-    changeTransitionDuration(loadingElement, timerValueSeconds);
-    changeButtonText(btnBell, secondsToDigital(timeLeft));
-    setInterval(() => {
-      timeLeft--;
-      changeButtonText(btnBell, secondsToDigital(timeLeft));
-    }, 1000)
-    
-    setTimeout(() => {
-      tryPlaySFX(bellSoundHref);
-    }, timerValueSeconds * 1000)
+  if(timerOn) {
+    clearInterval(timerCountInterval)
+    clearTimeout(timerSoundTimeout)
+    changeButtonText(btnBell, "🔔");
+    timerOn = false;
+    //Reset transition
+    document.getElementsByClassName("loading-anim")[1].style.transitionDuration= "0s";
   }
   else {
-    tryPlaySFX(bellSoundHref);
+    if(timerSwitchValue) {
+      let timeLeft = timerValueSeconds;
+      changeTransitionDuration(loadingElement, timerValueSeconds);
+      changeButtonText(btnBell, secondsToDigital(timeLeft));
+      timerCountInterval = setInterval(() => {
+        timeLeft--;
+        changeButtonText(btnBell, secondsToDigital(timeLeft));
+      }, 1000)
+      
+      timerSoundTimeout = setTimeout(() => {
+        tryPlaySFX(bellSoundHref);
+      }, timerValueSeconds * 1000)
+
+      timerOn = true;
+    }
+    else {
+      tryPlaySFX(bellSoundHref);
+    }
   }
 })
 
