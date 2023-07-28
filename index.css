@@ -124,10 +124,6 @@ select {
   background-color: var(--pink);
 }
 
-#btn-shot {
-  background-color: var(--blue);
-}
-
 .btn-text {
   filter: drop-shadow(0 0 2px black);
 }
@@ -153,28 +149,6 @@ select {
 
 #btn-bell:not(:active) .loading-anim {
   transition: width 1.6s linear;
-}
-
-#btn-shot:not(:active) .loading-anim {
-  transition: width .3s linear;
-}
-
-
-@keyframes music-progress {
-  0% {
-    background: linear-gradient(180deg, var(--yellow) 0%, var(--yellow-load) 100%);
-  }
-  100% {
-    background: linear-gradient(var(--yellow) 100%, var(--yellow-load) 100%);
-  }
-}
-
-@keyframes bell-progress {
-  
-}
-
-@keyframes shot-progress {
-  
 }
 
 /** Media Querys */
