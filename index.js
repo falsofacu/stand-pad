@@ -98,6 +98,15 @@ timerTime.addEventListener("change" , () => {
   console.log(timerValueSeconds);
 })
 
+//* Seconds to digital
+const secondsToDigital = (time) => {
+  const minutes = Math.floor(time / 60);
+  const seconds = time % 60;
+  const formattedMinutes = String(minutes).padStart(2, "0");
+  const formattedSeconds = String(seconds).padStart(2, "0");
+  return formattedMinutes + ":" + formattedSeconds;
+}
+
 // Selected song
 selectMusic.addEventListener("change", () => {
   currentSong = music[Number(selectMusic.value)];
@@ -143,8 +152,14 @@ btnMusic.addEventListener("transitionend", () => {
 btnBell.addEventListener("click", () => {
   const loadingElement = document.getElementsByClassName("loading-anim")[1];
   if(timerSwitchValue) {
+    let timeLeft = timerValueSeconds;
     changeTransitionDuration(loadingElement, timerValueSeconds);
-    changeButtonText(btnBell, "⏱️");
+    changeButtonText(btnBell, secondsToDigital(timeLeft));
+    setInterval(() => {
+      timeLeft--;
+      changeButtonText(btnBell, secondsToDigital(timeLeft));
+    }, 1000)
+    
     setTimeout(() => {
       tryPlaySFX(bellSoundHref);
     }, timerValueSeconds * 1000)
@@ -157,4 +172,3 @@ btnBell.addEventListener("click", () => {
 btnBell.addEventListener("transitionend", () => {
   changeButtonText(btnBell, "🔔");
 })
-
