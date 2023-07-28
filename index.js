@@ -175,6 +175,7 @@ btnBell.addEventListener("click", () => {
       }, 1000)
       
       timerSoundTimeout = setTimeout(() => {
+        clearInterval(timerCountInterval);
         tryPlaySFX(bellSoundHref);
       }, timerValueSeconds * 1000)
 
