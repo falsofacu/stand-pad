@@ -1,3 +1,4 @@
+
 //TODO: UNDERSTAND THIS THIS
 //* AUDIOCONTEXT API SETUP
 const audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -5,14 +6,14 @@ let musicSourceNode;
 let sfxSourceNode;
 let musicPlaying = false;
 
-//Audio file loader
+// Audio file loader
 async function loadAudioFile(url) {
   const response = await fetch(url);
   const arrayBuffer = await response.arrayBuffer();
   return await audioContext.decodeAudioData(arrayBuffer);
 }
 
-
+// Play song
 const tryPlayMusic = async (sound) => {
   try {
     const audioBuffer = await loadAudioFile(sound);
@@ -26,6 +27,7 @@ const tryPlayMusic = async (sound) => {
   }
 };
 
+// Play SFX
 const tryPlaySFX = async (sound) => {
   try {
     const audioBuffer = await loadAudioFile(sound);
@@ -38,6 +40,7 @@ const tryPlaySFX = async (sound) => {
   }
 };
 
+// Stop music
 const stopMusic = () => {
   if (musicSourceNode && audioContext.state === "running") {
     musicSourceNode.stop();
@@ -47,6 +50,7 @@ const stopMusic = () => {
   }
 };
 
+// Stop SFX
 const stopSFX = () => {
   if (sfxSourceNode && audioContext.state === "running") {
     sfxSourceNode.stop();
@@ -58,16 +62,96 @@ const stopSFX = () => {
 //* Vars
 const music = [
   {
-    name: "PELOTUDA",
-    artist: "DILLOM",
-    src: "./music/PELOTUDA - DILLOM.mp3"
+    name: "BERZERK",
+    artist: "EMINEM",
+    src: "./music/BERZERK - EMINEM.mp3"
   },
   {
-    name: "",
-    artist: "",
-    src: "./music/.mp3"
+    name: "BLACK BETTY",
+    artist: "RAM JAM",
+    src: "./music/BLACK BETTY - RAM JAM.mp3"
+  },
+  {
+    name: "CAN'T STOP",
+    artist: "RHCP",
+    src: "./music/CAN'T STOP - RHCP.mp3"
+  },
+  {
+    name: "CELEBRITY SKIN",
+    artist: "HOLE",
+    src: "./music/CELEBRITY SKIN - HOLE.mp3"
+  },
+  {
+    name: "CHISTE",
+    artist: "EL KUELGUE",
+    src: "./music/CHISTE - EL KUELGUE.mp3"
+  },
+  {
+    name: "DELE TIEMPO",
+    artist: "EL KUELGUE",
+    src: "./music/DELE TIEMPO - EL KUELGUE.mp3"
+  },
+  {
+    name: "FANKY",
+    artist: "CHARLY GARCÍA",
+    src: "./music/FANKY - CHARLY GARCÍA.mp3"
+  },
+  {
+    name: "GET ON UP",
+    artist: "JAMES BROWN",
+    src: "./music/GET ON UP - JAMES BROWN.mp3"
+  },
+  {
+    name: "IMMIGRANT SONG",
+    artist: "LED ZEPPELIN",
+    src: "./music/IMMIGRANT SONG - LED ZEPPELIN.mp3"
+  },
+  {
+    name: "JUMP AROUND",
+    artist: "HOUSE OF PAIN",
+    src: "./music/JUMP AROUND - HOUSE OF PAIN.mp3"
+  },
+  {
+    name: "PARANOIA POP",
+    artist: "BANDALOS CHINOS",
+    src: "./music/PARANOIA POP - BANDALOS CHINOS.mp3"
+  },
+  {
+    name: "PEACE FROG",
+    artist: "THE DOORS",
+    src: "./music/PEACE FROG - THE DOORS.mp3"
+  },
+  {
+    name: "PEOPLE GET UP AND DRIVE YOUR FUNKY SOUL",
+    artist: "JAMES BROWN",
+    src: "./music/PEOPLE GET UP AND DRIVE YOUR FUNKY SOUL - JAMES BROWN.mp3"
+  },
+  {
+    name: "QUE VAS A HACER TAN SOLA HOY",
+    artist: "VIEJAS LOCAS",
+    src: "./music/QUE VAS A HACER TAN SOLA HOY - VIEJAS LOCAS.mp3"
+  },
+  {
+    name: "ROCK AND ROLL YO",
+    artist: "CHARLY GARCÍA",
+    src: "./music/ROCK AND ROLL YO - CHARLY GARCÍA.mp3"
+  },
+  {
+    name: "THE SEED",
+    artist: "THE ROOTS",
+    src: "./music/THE SEED - THE ROOTS.mp3"
+  },
+  {
+    name: "TNT",
+    artist: "AC/DC",
+    src: "./music/TNT - ACDC.mp3"
+  },
+  {
+    name: "UN POCO DE AMOR FRANCES",
+    artist: "LOS REDONDOS",
+    src: "./music/UN POCO DE AMOR FRANCES - LOS REDONDOS.mp3"
   }
-]
+];
 
 const bellSoundHref = "https://falsofacu.github.io/stand-pad/music/BELL.mp3"
 
@@ -86,16 +170,21 @@ let currentSong = music[Number(selectMusic.value)];
 const btnMusic = document.getElementById("btn-music");
 const btnBell = document.getElementById("btn-bell");
 
-//* Update vars when necesary
-// Timer on/off
+//* Update Vars
+// Update timer state (on/off)
 timerSwitch.addEventListener("change", () => {
   timerSwitchValue = timerSwitch.checked;
 })
 
-// Timer time amount 
+// Update timer time amount 
 timerTime.addEventListener("change" , () => {
   timerValueSeconds = timerTime.value;
   console.log(timerValueSeconds);
+})
+
+// Update Selected song
+selectMusic.addEventListener("change", () => {
+  currentSong = music[Number(selectMusic.value)];
 })
 
 //* Seconds to digital
@@ -106,11 +195,6 @@ const secondsToDigital = (time) => {
   const formattedSeconds = String(seconds).padStart(2, "0");
   return formattedMinutes + ":" + formattedSeconds;
 }
-
-// Selected song
-selectMusic.addEventListener("change", () => {
-  currentSong = music[Number(selectMusic.value)];
-})
 
 //* Change emoji on click and reset after transition ends
 let changeButtonText = (element, text) => {
