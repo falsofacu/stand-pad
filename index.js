@@ -172,8 +172,12 @@ const btnBell = document.getElementById("btn-bell");
 
 //* Update Vars
 // Update timer state (on/off)
+let timerEnabled = false;
 timerSwitch.addEventListener("change", () => {
   timerSwitchValue = timerSwitch.checked;
+  //! TAKE THIS OUT OF HERE
+  timerEnabled ? document.getElementById("select-time").disabled = true : document.getElementById("select-time").removeAttribute("disabled");
+  timerEnabled = !timerEnabled;
 })
 
 // Update timer time amount 
