@@ -1,0 +1,92 @@
+[
+  {
+    "name": "BERZERK",
+    "artist": "EMINEM",
+    "src": "./music/BERZERK - EMINEM.mp3"
+  },
+  {
+    "name": "BLACK BETTY",
+    "artist": "RAM JAM",
+    "src": "./music/BLACK BETTY - RAM JAM.mp3"
+  },
+  {
+    "name": "CAN'T STOP",
+    "artist": "RHCP",
+    "src": "./music/CAN'T STOP - RHCP.mp3"
+  },
+  {
+    "name": "CELEBRITY SKIN",
+    "artist": "HOLE",
+    "src": "./music/CELEBRITY SKIN - HOLE.mp3"
+  },
+  {
+    "name": "CHISTE",
+    "artist": "EL KUELGUE",
+    "src": "./music/CHISTE - EL KUELGUE.mp3"
+  },
+  {
+    "name": "DELE TIEMPO",
+    "artist": "EL KUELGUE",
+    "src": "./music/DELE TIEMPO - EL KUELGUE.mp3"
+  },
+  {
+    "name": "FANKY",
+    "artist": "CHARLY GARCÍA",
+    "src": "./music/FANKY - CHARLY GARCÍA.mp3"
+  },
+  {
+    "name": "GET ON UP",
+    "artist": "JAMES BROWN",
+    "src": "./music/GET ON UP - JAMES BROWN.mp3"
+  },
+  {
+    "name": "IMMIGRANT SONG",
+    "artist": "LED ZEPPELIN",
+    "src": "./music/IMMIGRANT SONG - LED ZEPPELIN.mp3"
+  },
+  {
+    "name": "JUMP AROUND",
+    "artist": "HOUSE OF PAIN",
+    "src": "./music/JUMP AROUND - HOUSE OF PAIN.mp3"
+  },
+  {
+    "name": "PARANOIA POP",
+    "artist": "BANDALOS CHINOS",
+    "src": "./music/PARANOIA POP - BANDALOS CHINOS.mp3"
+  },
+  {
+    "name": "PEACE FROG",
+    "artist": "THE DOORS",
+    "src": "./music/PEACE FROG - THE DOORS.mp3"
+  },
+  {
+    "name": "PEOPLE GET UP AND DRIVE YOUR FUNKY SOUL",
+    "artist": "JAMES BROWN",
+    "src": "./music/PEOPLE GET UP AND DRIVE YOUR FUNKY SOUL - JAMES BROWN.mp3"
+  },
+  {
+    "name": "QUE VAS A HACER TAN SOLA HOY",
+    "artist": "VIEJAS LOCAS",
+    "src": "./music/QUE VAS A HACER TAN SOLA HOY - VIEJAS LOCAS.mp3"
+  },
+  {
+    "name": "ROCK AND ROLL YO",
+    "artist": "CHARLY GARCÍA",
+    "src": "./music/ROCK AND ROLL YO - CHARLY GARCÍA.mp3"
+  },
+  {
+    "name": "THE SEED",
+    "artist": "THE ROOTS",
+    "src": "./music/THE SEED - THE ROOTS.mp3"
+  },
+  {
+    "name": "TNT",
+    "artist": "AC/DC",
+    "src": "./music/TNT - ACDC.mp3"
+  },
+  {
+    "name": "UN POCO DE AMOR FRANCES",
+    "artist": "LOS REDONDOS",
+    "src": "./music/UN POCO DE AMOR FRANCES - LOS REDONDOS.mp3"
+  }
+]
