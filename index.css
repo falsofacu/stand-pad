@@ -144,7 +144,7 @@ select {
 }
 
 #btn-music:not(:active) .loading-anim {
-  transition: width 35s linear;
+  transition: width 60s linear;
 }
 
 #btn-bell:not(:active) .loading-anim {
